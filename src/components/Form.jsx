@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export default function Form() {
+export default function Form({addTransaction}) {
   return (
     <div>
         <form className="flex gap-2 flex-col" action="submit">
