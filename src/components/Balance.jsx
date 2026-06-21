@@ -1,13 +1,10 @@
 import { useState } from "react"
 
-
-
 export default function Balance({total,income,expense}) {
-  //  const [balance,setBalance]=useState(0.00)
-  //  const [incomeBalance,setIncomeBalance]=useState(0)
-  //  const [expenseBalance,setExpenseBalance]=useState(0)
-  const [text,setText]=useState('')
-  const [amount,setAmount]=useState(0)
+    const [balance,setBalance]=useState(0.00)
+    const [incomeBalance,setIncomeBalance]=useState(0)
+    const [expenseBalance,setExpenseBalance]=useState(0)
+
     
   return (
     <div className="flex flex-col justify-center items-center">
