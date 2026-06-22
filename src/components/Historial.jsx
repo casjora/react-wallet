@@ -21,7 +21,7 @@ export default function Historial({transactions,deleteTransaction}) {
                     <span>{t.text}</span>
                   </div>
                   <span className={`font-bold text-sm ${esPositivo ? 'text-emerald-500':'text-red-500'}`}>
-                    {esPositivo ? '+' : ''}${t.amount.toFixed(2)}
+                    {esPositivo ? '+' : '-'}${Math.abs(t.amount).toFixed(2)}
                   </span>
                 </li>
               )
