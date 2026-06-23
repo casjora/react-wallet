@@ -21,19 +21,17 @@ export default function Historial({transactions,deleteTransaction}) {
               const fecha = `${date.toLocaleDateString('en-US')} ${date.toLocaleTimeString('en-US',{hour:'2-digit',minute: '2-digit'})}`
               console.log(`${t} - ${t}`)
               return(
-                <li key={t.id} className={`gap-3 flex flex-col${esPositivo ? 'lg:border-l-5 lg:border-l-emerald-500':'lg:border-l-5 lg:border-l-red-500'}`}>
+                <li key={t.id} className={`gap-3 flex rounded-xl my-1 ${esPositivo ? 'lg:border-l-5 lg:border-l-emerald-500':'lg:border-l-5 lg:border-l-red-500'} bg-slate-100 shadow `}>
 
-                  <div className="flex flex-col justify-between w-full">
+                  <div className={`rounded-md  flex flex-col justify-between w-full px-2 my-2 `}>
                     <span>{t.text}</span>
                     <p className="lg:block hidden text-xs text-slate-400">{fecha}</p>
                     
                     
                   </div>
-                  <span className={`font-bold text-sm ${esPositivo ? 'text-emerald-500 ':'text-red-500'}`}>
-                    {esPositivo ? '+' : '-'}${Math.abs(t.amount).toFixed(2)}
-                    
-                  </span>
-                  <button onClick={()=>deleteTransaction(t.id) }>X</button>
+                  <span className={`flex justify-between items-center gap-2 font-bold text-sm ${esPositivo ? 'text-emerald-500 ':'text-red-500'}`}>
+                    {esPositivo ? '+' : '-'}${Math.abs(t.amount).toFixed(2)}<button onClick={()=>deleteTransaction(t.id) }>X</button></span>
+                  
 
                 </li>
               )
