@@ -34,11 +34,13 @@ function App() {
 
   return (
     <>
-    <main className="flex flex-col items-center py-20 px-5 bg-slate-200 min-h-screen">
-      <section className="w-full h-200 rounded-2xl px-5 bg-white shadow-xl">
+    <main className="flex flex-col items-center py-20 px-5 bg-slate-200 min-h-screen lg:px-40">
+      <section className="w-full h-200 rounded-2xl px-5 bg-white shadow-xl lg:max-h-150 lg:max-w-200 xl:max-w-300">
         <Balance total={total} income={income} expense={expense}></Balance>
+      <div className='lg:flex gap-5'>
         <Form addTransaction={addTransaction}/>
         <Historial transactions={transactions} deleteTransaction={deleteTransaction}/>
+      </div>
       </section>
       
     </main>

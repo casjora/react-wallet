@@ -17,7 +17,7 @@ export default function Form({addTransaction}) {
   }
 
   return (
-    <div>
+    <div className="lg:w-1/2">
         <form className="flex gap-2 flex-col" action="submit" onSubmit={handleSubmit}>
             <h2 className="pb-2 border-b-2 border-b-slate-300 text-sm font-medium">Nueva Transacción</h2>
             <label className="text-slate-300 font-medium text-sm capitalize" htmlFor="concepto">concepto</label>

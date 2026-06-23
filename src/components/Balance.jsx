@@ -9,12 +9,14 @@ export default function Balance({total,income,expense}) {
 
     
   return (
-    <div className="flex flex-col justify-center items-center">
-        <h1 className="text-2xl font-bold mt-10">React Wallet</h1>
+    <div className="flex flex-col justify-center items-center ">
+        <h1 className="text-2xl font-bold mt-10 self-start">React Wallet</h1>
         <div className="my-8 flex flex-col w-full justify-center items-center">
          <p className=" text-sm text-slate-400 font-bold block md:hidden">TU BALANCE</p>
+         <p className=" text-sm text-slate-400 font-bold lg:block hidden">TOTAL BALANCE</p>
+
          <em className="not-italic text-6xl font-bold">${total < 0 ? '':''}{Math.abs(total).toFixed(2)}</em>
-         <div className="mt-5 w-7/10 md:flex hidden ">
+         <div className="mt-5 w-4/10 md:flex hidden ">
             <div className="border-r-2 border-r-slate-200 w-1/2 flex flex-col justify-center items-center" >
                 <p className="text-slate-400 font-bold">INCOME</p>
                 <span className="text-emerald-600 font-bold">+${income.toFixed(2)}</span>
